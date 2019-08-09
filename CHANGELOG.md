@@ -2,6 +2,11 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.7.0
+
+- Simulate `secureTextEntry` [#62](https://github.com/retyui/react-native-confirmation-code-field/pull/69)
+- Reduce package size
+
 ## 3.6.0
 
 - Add new prop `blurOnSubmit?: boolean` [#62](https://github.com/retyui/react-native-confirmation-code-field/pull/62) by [leozzitowned](https://github.com/leozzitowned)
