@@ -1,7 +1,7 @@
 # react-native-confirmation-code-field
 
 [![npm](https://img.shields.io/npm/v/react-native-confirmation-code-field.svg)](https://www.npmjs.com/package/react-native-confirmation-code-field)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-confirmation-code-field.svg)](https://www.npmjs.com/package/react-native-confirmation-code-field)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-confirmation-code-field.svg)](https://www.npmtrends.com/react-native-confirmation-code-field)
 [![Travis](https://img.shields.io/travis/retyui/react-native-confirmation-code-field.svg?label=unix)](https://travis-ci.org/retyui/react-native-confirmation-code-field)
 
 A react-native confirmation code field compatible with iOS, Android and Web Platforms (based on [this](https://github.com/ttdung11t2/react-native-confirmation-code-input) project [Migration Guide](docs/migration.md))
@@ -36,16 +36,14 @@ npm install react-native-confirmation-code-field
 ## Usage
 
 ```js
-import React, { Component } from 'react';
+import React, { useCallback } from 'react';
 import CodeInput from 'react-native-confirmation-code-field';
 
-class App extends Component {
-  handlerOnFulfill = code => console.log(code);
+export const App = () => {
+  const handlerOnFulfill = useCallback(code => console.log(code), []);
 
-  render() {
-    return <CodeInput onFulfill={this.handlerOnFulfill} />;
-  }
-}
+  return <CodeInput onFulfill={handlerOnFulfill} />;
+};
 ```
 
 ## How paste or clear code
@@ -92,6 +90,9 @@ class App extends Component {
 ## Analogs
 
 - [react-native-keycode](https://github.com/leanmotherfuckers/react-native-keycode)
+- [react-native-otp-input](https://github.com/Twotalltotems/react-native-otp-input)
+- [react-native-otp-inputs](https://github.com/dsznajder/react-native-otp-inputs)
+- [react-native-otp](https://github.com/thuansb/react-native-otp)
 - [react-native-pin-code](https://github.com/gkueny/react-native-pin-code)
 
 ## How it works?
