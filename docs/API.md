@@ -9,6 +9,7 @@
     - [`autoFocus?: boolean`](#autofocus-boolean)
     - [`codeLength?: number`](#codelength-number)
     - [`defaultCode?: string`](#defaultcode-string)
+    - [`blurOnSubmit?: boolean`](#bluronsubmit-boolean)
   - [Style props](#style-props)
     - [`CellComponent?: ComponentType`](#cellcomponent-componenttype)
     - [`maskSymbol?: string`](#masksymbol-string)
@@ -20,7 +21,6 @@
     - [`size?: number`](#size-number)
     - [`inputPosition?: 'left' | 'right' | 'center' | 'full-width'`](#inputposition-left--right--center--full-width)
     - [`variant?: 'border-box' | 'border-circle' | 'border-b' | 'clear'`](#variant-border-box--border-circle--border-b--clear)
-    - [`blurOnSubmit?: boolean`](#bluronsubmit-boolean)
   - [Customize props](#customize-props)
     - [`containerProps?: ViewProps`](#containerprops-viewprops)
     - [`inputProps?: TextInputProps`](#inputprops-textinputprops)
@@ -55,6 +55,8 @@ Auto focus on code input, Default `false`
 ### `codeLength?: number`
 
 Length of confirmation code -> number of cells. Default `5`
+
+<img width="400" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/master/docs/img/codeLength.png"/>
 
 ### `defaultCode?: string`
 

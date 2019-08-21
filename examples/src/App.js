@@ -3,6 +3,7 @@ import { ScrollView, View } from 'react-native';
 
 import ActiveColorDemo from './propsDemos/ActiveColor';
 import CellBorderWidthDemo from './propsDemos/CellBorderWidth';
+import CodeLength from './propsDemos/CodeLength';
 import InactiveColorDemo from './propsDemos/InactiveColor';
 import MaskSymbol from './propsDemos/MaskSymbol';
 import PositionDemo from './propsDemos/InputPosition';
@@ -25,6 +26,7 @@ export default class App extends Component {
           <RedExample />
           <DarkExample />
 
+          <CodeLength />
           <MaskSymbol />
           <ActiveColorDemo />
           <InactiveColorDemo />
