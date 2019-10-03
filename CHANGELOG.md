@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0
+
+- Fix problem with focus on Inputs [#78](https://github.com/retyui/react-native-confirmation-code-field/issues/78)
+
 ## 3.7.1
 
 - Fix problem when cursor inherit `<Cell/>` styles [#72](https://github.com/retyui/react-native-confirmation-code-field/pull/72)
