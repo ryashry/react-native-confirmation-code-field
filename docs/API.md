@@ -13,6 +13,7 @@
   - [Style props](#style-props)
     - [`CellComponent?: ComponentType`](#cellcomponent-componenttype)
     - [`maskSymbol?: string`](#masksymbol-string)
+    - [`maskSymbolProps?: Object`](#masksymbolprops-object)
     - [`keyboardType?: KeyboardType`](#keyboardtype-keyboardtype)
     - [`activeColor?: string`](#activecolor-string)
     - [`inactiveColor?: string`](#inactivecolor-string)
@@ -77,6 +78,13 @@ A react component that use for render cell. It is really helpful for create [ani
 A symbol that will be displayed when the field is filled. Supports emoji.
 
 <img width="400" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/master/docs/img/maskSymbol.jpg"/>
+
+### `maskSymbolProps?: Object`
+
+Text Component props to be applied on mask symbol.
+
+- to control symbol appearing `maskSymbolProps={{ delay: 1000 }}`
+- to apply custom styles `maskSymbolProps={{ style: { fontSize: 20 }}`
 
 ### `keyboardType?: KeyboardType`
 

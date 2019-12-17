@@ -42,7 +42,15 @@ import CodeInput from 'react-native-confirmation-code-field';
 export const App = () => {
   const handlerOnFulfill = useCallback(code => console.log(code), []);
 
-  return <CodeInput onFulfill={handlerOnFulfill} />;
+  return (
+    <CodeInput
+      onFulfill={handlerOnFulfill}
+      inputProps={{
+        // Handle onTextChange events
+        onTextChange: text => console.log(text),
+      }}
+    />
+  );
 };
 ```
 
