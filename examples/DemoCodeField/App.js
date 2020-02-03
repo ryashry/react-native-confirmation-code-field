@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {SafeAreaView, Text, StyleSheet} from 'react-native';
 
 import {
-  CodeFiled,
+  CodeField,
   Cursor,
   useBlurOnFulfill,
   useClearByFocusCell,
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.root}>
       <Text style={styles.title}>Verification</Text>
-      <CodeFiled
+      <CodeField
         ref={ref}
         {...props}
         value={value}

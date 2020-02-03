@@ -10,7 +10,7 @@ import {getStyle, getSymbols} from './utils';
 import TextInputCustom from './TextInputCustom';
 import useFocusState from './useFocusState';
 
-import styles from './CodeFiled.styles';
+import styles from './CodeField.styles';
 
 type Props = {
   rootStyle?: StyleProp<any>;
@@ -28,7 +28,7 @@ type Props = {
 
 const DEFAULT_CELL_COUNT = 4;
 
-const CodeFiled = (
+const CodeField = (
   {
     rootStyle,
     textInputStyle,
@@ -83,4 +83,4 @@ const CodeFiled = (
   );
 };
 
-export default forwardRef(CodeFiled);
+export default forwardRef(CodeField);

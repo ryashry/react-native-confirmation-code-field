@@ -1,6 +1,6 @@
 import {Platform, StyleSheet, I18nManager} from 'react-native';
 
-const codeFiledStyles = StyleSheet.create({
+const codeFieldStyles = StyleSheet.create({
   root: {
     justifyContent: 'space-between',
     // https://github.com/retyui/react-native-confirmation-code-field/pull/55
@@ -20,4 +20,4 @@ const codeFiledStyles = StyleSheet.create({
   },
 });
 
-export default codeFiledStyles;
+export default codeFieldStyles;
