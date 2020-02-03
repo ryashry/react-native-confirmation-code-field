@@ -4,7 +4,7 @@
 
 - [API documentation react-native-confirmation-code-field](#api-documentation-react-native-confirmation-code-field)
   - [Components](#components)
-    - [`<CodeFiled />`](#codefiled-)
+    - [`<CodeField />`](#codefield-)
       - [`cellCount?: number`](#cellcount-number)
       - [`renderCell: (options: {symbol: string, index: number, isFocused: boolean}) => ReactElement`](#rendercell-options-symbol-string-index-number-isfocused-boolean--reactelement)
       - [`RootComponent?: ComponentType<any>`](#rootcomponent-componenttypeany)
@@ -22,7 +22,7 @@
 
 ## Components
 
-### `<CodeFiled />`
+### `<CodeField />`
 
 This a base component that render `RootComponent (default: View)` with cells that would be returned by `renderCell()` and a `<TextInput/>` that will be invisible and over all cells within root component
 
@@ -94,12 +94,12 @@ Simple hook that add functionality that trim value by pressed cell
 
 After invoke this hook wil return array with two values `[props,getCellOnLayout]`;
 
-- `props` - an object that you should spreed to `<CodeFiled/>`
+- `props` - an object that you should spreed to `<CodeField/>`
 - `getCellOnLayout(index: number): Function` - helper method that returns `onLayout` handler
 
 ```js
 import {
-  CodeFiled,
+  CodeField,
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 
@@ -110,7 +110,7 @@ const App = () => {
   });
 
   return (
-    <CodeFiled
+    <CodeField
       {...codeFiledProps}
       value={value}
       onChangeText={setValue}
@@ -136,7 +136,7 @@ You should pass two params:
 - `value?: string` - a string value that
 - `cellCount: number`
 
-Returned value will be a TextInput ref that you should pass to `<CodeFiled/>` component.
+Returned value will be a TextInput ref that you should pass to `<CodeField/>` component.
 
 And when a value length would equal cellCount will be called `.blur()` method.
 
@@ -144,7 +144,7 @@ It work perfectly with `useClearByFocusCell` hook.
 
 ```js
 import {
-  CodeFiled,
+  CodeField,
   useBlurOnFulfill,
 } from 'react-native-confirmation-code-field';
 
@@ -153,7 +153,7 @@ const App = () => {
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
 
   return (
-    <CodeFiled
+    <CodeField
       ref={ref}
       value={value}
       cellCount={CELL_COUNT}
