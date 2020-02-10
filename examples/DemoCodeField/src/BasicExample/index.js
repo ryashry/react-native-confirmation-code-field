@@ -9,7 +9,7 @@ import {
 } from 'react-native-confirmation-code-field';
 
 const styles = StyleSheet.create({
-  root: {flex: 1, padding: 20},
+  root: {padding: 20, minHeight: 400},
   title: {textAlign: 'center', fontSize: 30},
   codeFiledRoot: {marginTop: 20},
   cell: {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 const CELL_COUNT = 6;
 
-const App = () => {
+const BasicExample = () => {
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -60,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default BasicExample;

@@ -1,5 +1,7 @@
 # DemoCodeFiled
 
+<a href="https://github.com/retyui/react-native-confirmation-code-field/tree/4.x/examples/src/realDemo/AnimatedExample"><img width="350" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/4.x/docs/img/animated.gif"/></a>
+
 Install and use:
 
 ```sh
