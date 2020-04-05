@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
     height: CELL_SIZE,
     marginTop: 30,
     paddingHorizontal: 20,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
   cell: {
-    margin: 0,
+    marginHorizontal: 8,
     height: CELL_SIZE,
     width: CELL_SIZE,
     lineHeight: CELL_SIZE - 5,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     height: 80,
     backgroundColor: '#3557b7',
     justifyContent: 'center',
-    minWidth: 360,
+    minWidth: 300,
     marginBottom: 100,
   },
   nextButtonText: {
