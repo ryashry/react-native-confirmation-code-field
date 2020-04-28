@@ -1,6 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [API documentation react-native-confirmation-code-field](#api-documentation-react-native-confirmation-code-field)
   - [Components](#components)
     - [`<CodeField />`](#codefield-)
@@ -124,7 +125,7 @@ renderCell={({index, symbol, isFocused}) => (
 )}
 ```
 
-#### Example
+**Example:**
 
 ```js
 import {
