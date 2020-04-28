@@ -4,7 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-native-confirmation-code-field.svg)](https://www.npmtrends.com/react-native-confirmation-code-field)
 ![Node.js CI](https://github.com/retyui/react-native-confirmation-code-field/workflows/Node.js%20CI/badge.svg)
 
-A react-native confirmation code field compatible with iOS, Android
+A simple react-native confirmation code field compatible with iOS, Android.
 
 ### Links
 
@@ -17,12 +17,15 @@ A react-native confirmation code field compatible with iOS, Android
 - 🚮 Clearing part of the code by clicking on the cell;
 - 🍎 Support "fast paste SMS-code" on iOS. And custom code paste for Android;
 - ⚡ TextInput `ref` support;
-- 🛠 Extendable and hackable;
+- 🛠 Highly customizable;
 - 🤓 Readable [changelog](CHANGELOG.md).
 
 ## Screenshots
 
-<img width="250" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/4.x/docs/img/animated.gif"/><img width="250" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/4.x/docs/img/red.gif"/><img width="250" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/4.x/docs/img/dark.gif"/>
+|   |   |
+|---|---|
+| [![react-native-confirmation-code-field animated example](https://media.giphy.com/media/huJrqF0YRrNJBTwUmz/giphy.gif)](examples/DemoCodeField/src/AnimatedExample) | [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/L4HHvT9Rwdlcdj59np/giphy.gif)](examples/DemoCodeField/src/MaskExample) [![react-native-confirmation-code-field underline example](https://media.giphy.com/media/XEazF64IwELNV8wZge/giphy.gif)](examples/DemoCodeField/src/UnderlineExample) [![react-native-confirmation-code-field basic example](https://media.giphy.com/media/WT4NHiw3XM0GWbjstc/giphy.gif)](examples/DemoCodeField/src/BasicExample) |
+
 
 ## Install
 
@@ -36,7 +39,22 @@ yarn add react-native-confirmation-code-field@5
 
 ## How it work
 
-I use an invisible `<TextInput/>` component that will be stretched over `<Cell/>` components to have ability paste code normally on iOS [issue#25](https://github.com/retyui/react-native-confirmation-code-field/issues/25#issuecomment-446497934)
+I use an invisible `<TextInput/>` component that will be stretched over `<Cell/>` components. To solve next problems:
+
+- When user pastes code from SMS on iOS [issue#25](https://github.com/retyui/react-native-confirmation-code-field/issues/25#issuecomment-446497934)
+- Better UX when user types fast, or system sluggish, characters might lost when component switching focus between `<TextInput/>`.
+
+## Basic example
+
+I took a minimal implementation approach.
+It mean that this component provides low-level functionality so you can create incredible UI without tears 😭.
+I recommend you start with creating your own wrapper where you apply all styles and basic configuration.
+
+You can use a ready-made solution out of the box:
+
+- [Animated variant](examples/DemoCodeField/src/AnimatedExample)
+- [Mask variant](examples/DemoCodeField/src/MaskExample)
+- [Underline variant](examples/DemoCodeField/src/UnderlineExample)
 
 ```js
 import React, {useState} from 'react';

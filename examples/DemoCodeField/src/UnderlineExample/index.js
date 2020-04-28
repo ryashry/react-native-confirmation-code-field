@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView, Text, View} from 'react-native';
 
 import {
   CodeField,
@@ -10,9 +10,9 @@ import {
 
 import styles from './styles';
 
-const CELL_COUNT = 6;
+const CELL_COUNT = 4;
 
-const BasicExample = () => {
+const UnderlineExample = () => {
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -22,7 +22,7 @@ const BasicExample = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <Text style={styles.title}>Basic example</Text>
+      <Text style={styles.title}>Underline example</Text>
       <CodeField
         ref={ref}
         {...props}
@@ -32,16 +32,19 @@ const BasicExample = () => {
         rootStyle={styles.codeFiledRoot}
         keyboardType="number-pad"
         renderCell={({index, symbol, isFocused}) => (
-          <Text
+          <View
+            // Make sure that you pass onLayout={getCellOnLayoutHandler(index)} prop to root component of "Cell"
+            onLayout={getCellOnLayoutHandler(index)}
             key={index}
-            style={[styles.cell, isFocused && styles.focusCell]}
-            onLayout={getCellOnLayoutHandler(index)}>
-            {symbol || (isFocused ? <Cursor /> : null)}
-          </Text>
+            style={[styles.cellRoot, isFocused && styles.focusCell]}>
+            <Text style={styles.cellText}>
+              {symbol || (isFocused ? <Cursor /> : null)}
+            </Text>
+          </View>
         )}
       />
     </SafeAreaView>
   );
 };
 
-export default BasicExample;
+export default UnderlineExample;
