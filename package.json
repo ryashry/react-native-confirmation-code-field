@@ -1,6 +1,6 @@
 {
   "name": "react-native-confirmation-code-field",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
