@@ -11,6 +11,7 @@
     "test": "jest --coverage",
     "lint": "eslint './src/*.{js,ts,tsx}' --quiet",
     "build": "rm -f lib/* && yarn tsc",
+    "postbuild": "prettier --write lib/*.js lib/*.d.ts",
     "docs": "yarn doctoc API.md",
     "postinstall": "node ./path-rn-62.js",
     "postuninstall": "node ./path-rn-62.js",
