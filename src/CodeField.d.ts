@@ -1,4 +1,4 @@
-import {StyleProp, TextInputProps, TextStyle} from 'react-native';
+import {StyleProp, TextInput, TextInputProps, TextStyle} from 'react-native';
 import React from 'react';
 declare const _default: React.ForwardRefExoticComponent<
   {
@@ -15,7 +15,8 @@ declare const _default: React.ForwardRefExoticComponent<
       index: number;
       isFocused: boolean;
     }) => React.ReactElement<any, any>;
-  } & Omit<TextInputProps, 'style'>
+  } & Omit<TextInputProps, 'style'> &
+    React.RefAttributes<TextInput>
 >;
 
 export default _default;

@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.1.1
+
+Fixed typescript issue [#127](https://github.com/retyui/react-native-confirmation-code-field/issues/127)
+
 ## 6.0.0
 
 Added support of react native 0.62.x
