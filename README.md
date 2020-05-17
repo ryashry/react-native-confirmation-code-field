@@ -106,6 +106,7 @@ const App = () => {
         cellCount={CELL_COUNT}
         rootStyle={styles.codeFiledRoot}
         keyboardType="number-pad"
+        textContentType="oneTimeCode"
         renderCell={({index, symbol, isFocused}) => (
           <Text
             key={index}

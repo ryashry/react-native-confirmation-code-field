@@ -31,6 +31,7 @@ const UnderlineExample = () => {
         cellCount={CELL_COUNT}
         rootStyle={styles.codeFiledRoot}
         keyboardType="number-pad"
+        textContentType="oneTimeCode"
         renderCell={({index, symbol, isFocused}) => (
           <View
             // Make sure that you pass onLayout={getCellOnLayoutHandler(index)} prop to root component of "Cell"

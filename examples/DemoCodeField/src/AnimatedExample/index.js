@@ -113,6 +113,7 @@ const AnimatedExample = () => {
         cellCount={CELL_COUNT}
         rootStyle={styles.codeFiledRoot}
         keyboardType="number-pad"
+        textContentType="oneTimeCode"
         renderCell={renderCell}
       />
       <View style={styles.nextButton}>

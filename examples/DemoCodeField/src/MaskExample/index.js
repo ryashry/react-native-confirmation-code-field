@@ -57,6 +57,7 @@ const MaskExample = () => {
         cellCount={CELL_COUNT}
         rootStyle={styles.codeFiledRoot}
         keyboardType="number-pad"
+        textContentType="oneTimeCode"
         renderCell={renderCell}
       />
     </SafeAreaView>
