@@ -6,9 +6,10 @@ import {
   Cursor,
   useBlurOnFulfill,
   useClearByFocusCell,
+  MaskSymbol,
+  isLastFilledCell,
 } from 'react-native-confirmation-code-field';
 
-import MaskSymbol from './MaskSymbol';
 import styles from './styles';
 
 const CELL_COUNT = 6;
@@ -26,11 +27,10 @@ const MaskExample = () => {
     if (symbol) {
       textChild = (
         <MaskSymbol
-          mask="❤️"
-          delay={500}
-          value={symbol}
-          isLastIndex={index === value.length - 1}
-        />
+          maskSymbol="❤️"
+          isLastFilledCell={isLastFilledCell({index, value})}>
+          {symbol}
+        </MaskSymbol>
       );
     } else if (isFocused) {
       textChild = <Cursor />;
