@@ -8,6 +8,9 @@
     "path-rn-62.js"
   ],
   "scripts": {
+    "ci": "yarn lint && yarn test && yarn size",
+    "presize": "yarn build",
+    "size": "size-limit",
     "test": "jest --coverage",
     "lint": "eslint './src/*.{js,ts,tsx}' --quiet",
     "build": "rm -rf esm && tsc --outDir esm",
@@ -22,6 +25,7 @@
     "react-native": ">=0.59.0"
   },
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.5.0",
     "@types/jest": "^25.2.3",
     "@types/react": "^16.9.35",
     "@types/react-native": "^0.62.10",
@@ -34,8 +38,9 @@
     "eslint-plugin-react": "^7.20.0",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "react-native": "^0.62.2",
     "react": "^16.9.0",
+    "react-native": "^0.62.2",
+    "size-limit": "^4.5.0",
     "typescript": "^3.9.2"
   },
   "author": "David <4661784+retyui@users.noreply.github.com>",
