@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.2.0
+
+Publish a compatible bundle for react-native-web
+
 ## 6.1.1
 
 Fixed typescript issue [#127](https://github.com/retyui/react-native-confirmation-code-field/issues/127)
