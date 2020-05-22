@@ -1,8 +1,10 @@
 # react-native-confirmation-code-field
 
-[![npm](https://img.shields.io/npm/v/react-native-confirmation-code-field.svg)](https://www.npmjs.com/package/react-native-confirmation-code-field)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-confirmation-code-field.svg)](https://www.npmtrends.com/react-native-confirmation-code-field)
-![Node.js CI](https://github.com/retyui/react-native-confirmation-code-field/workflows/Node.js%20CI/badge.svg)
+[![react-native-confirmation-code-field on npm](https://img.shields.io/npm/v/react-native-confirmation-code-field.svg)](https://www.npmjs.com/package/react-native-confirmation-code-field)
+[![react-native-confirmation-code-field downloads](https://img.shields.io/npm/dm/react-native-confirmation-code-field.svg)](https://www.npmtrends.com/react-native-confirmation-code-field)
+[![react-native-confirmation-code-field bundle size](https://img.shields.io/bundlephobia/minzip/react-native-confirmation-code-field)](https://bundlephobia.com/result?p=react-native-confirmation-code-field)
+[![CI status](https://github.com/retyui/react-native-confirmation-code-field/workflows/Node.js%20CI/badge.svg)](https://github.com/retyui/react-native-confirmation-code-field/actions)
+
 
 A simple react-native confirmation code field compatible with iOS, Android.
 
@@ -10,6 +12,7 @@ A simple react-native confirmation code field compatible with iOS, Android.
 
 - [Documentation](API.md)
 - [Example app](examples/DemoCodeField)
+- [Live Expo app](https://snack.expo.io/Zil!jCFft)
 
 ### Component features:
 
