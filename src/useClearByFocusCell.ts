@@ -33,7 +33,10 @@ type Options = {
 
 const useClearByFocusCell = (
   options: Options,
-): [{}, (index: number) => (event: LayoutChangeEvent) => void] => {
+): [
+  Record<string, unknown>,
+  (index: number) => (event: LayoutChangeEvent) => void,
+] => {
   const valueRef = useRef<Options>(options);
   const cellsLayouts = useRef<LayoutsMap>({});
 

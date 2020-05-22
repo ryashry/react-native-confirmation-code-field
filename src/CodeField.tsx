@@ -14,7 +14,7 @@ import styles from './CodeField.styles';
 type Props = {
   rootStyle?: StyleProp<any>;
   textInputStyle?: StyleProp<TextStyle>;
-  RootProps?: {};
+  RootProps?: Record<string, unknown>;
   RootComponent?: React.ComponentType<any>;
 
   cellCount?: number;

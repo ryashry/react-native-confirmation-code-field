@@ -4,7 +4,7 @@ declare const _default: React.ForwardRefExoticComponent<
   {
     rootStyle?: StyleProp<any>;
     textInputStyle?: StyleProp<TextStyle>;
-    RootProps?: {} | undefined;
+    RootProps?: Record<string, unknown> | undefined;
     RootComponent?:
       | React.ComponentClass<any, any>
       | React.FunctionComponent<any>
