@@ -5,7 +5,6 @@
 [![react-native-confirmation-code-field bundle size](https://badgen.net/bundlephobia/minzip/react-native-confirmation-code-field)](https://bundlephobia.com/result?p=react-native-confirmation-code-field)
 [![CI status](https://github.com/retyui/react-native-confirmation-code-field/workflows/Node.js%20CI/badge.svg)](https://github.com/retyui/react-native-confirmation-code-field/actions)
 
-
 A simple react-native confirmation code field compatible with iOS, Android.
 
 ### Links
@@ -16,19 +15,18 @@ A simple react-native confirmation code field compatible with iOS, Android.
 
 ### Component features:
 
-- 🔮 Simple. Easy to use;
+- 🔮 Simple and tiny `1.55 KB`. Easy to use;
 - 🚮 Clearing part of the code by clicking on the cell;
 - 🍎 Support "fast paste SMS-code" on iOS. And custom code paste for Android;
 - ⚡ TextInput `ref` support;
-- 🛠 Highly customizable;
+- 🛠 Highly customizable. Can be used as masked TextInput;
 - 🤓 Readable [changelog](CHANGELOG.md).
 
 ## Screenshots
 
 |   |   |
 |---|---|
-| [![react-native-confirmation-code-field animated example](https://media.giphy.com/media/huJrqF0YRrNJBTwUmz/giphy.gif)](examples/DemoCodeField/src/AnimatedExample) | [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/L4HHvT9Rwdlcdj59np/giphy.gif)](examples/DemoCodeField/src/MaskExample) [![react-native-confirmation-code-field underline example](https://media.giphy.com/media/XEazF64IwELNV8wZge/giphy.gif)](examples/DemoCodeField/src/UnderlineExample) [![react-native-confirmation-code-field basic example](https://media.giphy.com/media/WT4NHiw3XM0GWbjstc/giphy.gif)](examples/DemoCodeField/src/BasicExample) |
-
+| [![react-native-confirmation-code-field animated example](https://media.giphy.com/media/huJrqF0YRrNJBTwUmz/giphy.gif)](examples/DemoCodeField/src/AnimatedExample) | [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/L4HHvT9Rwdlcdj59np/giphy.gif)](examples/DemoCodeField/src/MaskExample) [![react-native-confirmation-code-field underline example](https://media.giphy.com/media/XEazF64IwELNV8wZge/giphy.gif)](examples/DemoCodeField/src/UnderlineExample) [![react-native-confirmation-code-field formatting example](https://media.giphy.com/media/Y1TB1fSFtWHAdKSpZY/giphy.gif)](examples/DemoCodeField/src/FormattingExample) |
 
 ## Install
 
@@ -56,8 +54,9 @@ I recommend you start with creating your own wrapper where you apply all styles 
 You can use a ready-made solution out of the box:
 
 - [Animated variant](examples/DemoCodeField/src/AnimatedExample)
-- [Mask variant](examples/DemoCodeField/src/MaskExample)
+- [Formatting example](examples/DemoCodeField/src/FormattingExample)
 - [Underline variant](examples/DemoCodeField/src/UnderlineExample)
+- [Mask variant](examples/DemoCodeField/src/MaskExample)
 
 ```js
 import React, {useState} from 'react';

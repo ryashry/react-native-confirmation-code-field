@@ -29,6 +29,12 @@ yarn android
 
 ---
 
+- Masked TextInput for Social security number [src/FormattingExample](src/FormattingExample)
+
+[![react-native-confirmation-code-field formatting example](https://media.giphy.com/media/Y1TB1fSFtWHAdKSpZY/giphy.gif)](src/FormattingExample)
+
+---
+
 - Customizable password mask and placeholder characters [src/AnimatedExample](src/MaskExample)
 
 [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/lOsYK6oy4TVjK0qgbt/giphy.gif)](src/MaskExample)
