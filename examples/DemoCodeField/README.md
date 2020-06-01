@@ -35,6 +35,12 @@ yarn android
 
 ---
 
+- Hide & Show password [src/UnmaskExample](src/UnmaskExample)
+
+[![react-native-confirmation-code-field unmask example](https://media.giphy.com/media/jslJYqajRARsyANwdf/giphy.gif)](src/UnmaskExample)
+
+---
+
 - Customizable password mask and placeholder characters [src/AnimatedExample](src/MaskExample)
 
 [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/lOsYK6oy4TVjK0qgbt/giphy.gif)](src/MaskExample)

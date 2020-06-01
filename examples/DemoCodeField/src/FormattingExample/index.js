@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 
 import {
@@ -33,9 +33,9 @@ const FormattingExample = () => {
         keyboardType="number-pad"
         textContentType="oneTimeCode"
         renderCell={({index, symbol, isFocused}) => (
-          <>
+          <Fragment key={index}>
             <Text
-              key={index}
+              key={`value-${index}`}
               style={[styles.cell, isFocused && styles.focusCell]}
               onLayout={getCellOnLayoutHandler(index)}>
               {symbol || (isFocused ? <Cursor /> : null)}
@@ -43,7 +43,7 @@ const FormattingExample = () => {
             {index === 2 || index === 4 ? (
               <View key={`separator-${index}`} style={styles.separator} />
             ) : null}
-          </>
+          </Fragment>
         )}
       />
     </SafeAreaView>
