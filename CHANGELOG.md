@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.4.0
+
+- Fix RTL layout ![rtl example usage](https://media.giphy.com/media/hUAFT2kCRE2iku5KwG/giphy.gif)
+
 ## 6.3.0
 
 - A module was adapted for old react-native versions (now you can use a 6 version for old that 0.62.x)

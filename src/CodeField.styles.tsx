@@ -1,10 +1,9 @@
-import {Platform, StyleSheet, I18nManager} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const codeFieldStyles = StyleSheet.create({
   root: {
     justifyContent: 'space-between',
-    // https://github.com/retyui/react-native-confirmation-code-field/pull/55
-    flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
+    flexDirection: 'row',
   },
   textInput: {
     ...StyleSheet.absoluteFillObject,
