@@ -34,7 +34,7 @@ A simple react-native confirmation code field compatible with iOS, Android.
 yarn add react-native-confirmation-code-field
 ```
 
-## How it work
+## How it works
 
 I use an invisible `<TextInput/>` component that will be stretched over `<Cell/>` components. To solve next problems:
 
