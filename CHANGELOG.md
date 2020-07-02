@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.5.0
+
+- Fix copy\paste menu appearing when `caretHidden={true}` and `value={''}` [#140](https://github.com/retyui/react-native-confirmation-code-field/issues/140)
+
 ## 6.4.0
 
 - Fix RTL layout ![rtl example usage](https://media.giphy.com/media/hUAFT2kCRE2iku5KwG/giphy.gif)

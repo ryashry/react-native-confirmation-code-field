@@ -62,8 +62,11 @@ const CodeField = (
     <RootComponent {...RootProps} style={getStyle(styles.root, rootStyle)}>
       {cells}
       <TextInput
-        caretHidden
         disableFullscreenUI
+        // Users can't paste\copy text when `caretHidden={true}` and `value={''}`
+        // Because menu doesn't appear
+        // See more: https://github.com/retyui/react-native-confirmation-code-field/issues/140
+        caretHidden={false}
         spellCheck={false}
         autoCorrect={false}
         blurOnSubmit={false}
