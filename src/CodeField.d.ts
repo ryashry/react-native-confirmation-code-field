@@ -1,5 +1,5 @@
 import {StyleProp, TextInput, TextInputProps, TextStyle} from 'react-native';
-import React from 'react';
+
 declare const _default: React.ForwardRefExoticComponent<
   {
     rootStyle?: StyleProp<any>;
