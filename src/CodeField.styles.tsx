@@ -15,7 +15,7 @@ const codeFieldStyles = StyleSheet.create({
     ...Platform.select({
       web: {
         width: '100%',
-        // Fix iOS Safary aggressive zoom
+        // Fix iOS Safari aggressive zoom
         fontSize: 16,
       },
     }),

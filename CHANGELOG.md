@@ -2,9 +2,13 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.5.1
+
+- Revert previous fix (6.5.0) to solve an issue [#153](https://github.com/retyui/react-native-confirmation-code-field/issues/153)
+
 ## 6.5.0
 
-- Fix copy\paste menu appearing when `caretHidden={true}` and `value={''}` [#140](https://github.com/retyui/react-native-confirmation-code-field/issues/140)
+- Fix copy\paste menu appearing when `caretHidden={true}` and `value={''}` [#140](https://github.com/retyui/react-native-confirmation-code-field/issues/140), thanks @sprotymo 
 
 ## 6.4.0
 
