@@ -24,19 +24,43 @@ A simple react-native confirmation code field compatible with iOS, Android.
 
 ## Screenshots
 
-|   |   |
-|---|---|
+|                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![react-native-confirmation-code-field animated example](https://media.giphy.com/media/huJrqF0YRrNJBTwUmz/giphy.gif)](examples/DemoCodeField/src/AnimatedExample) | [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/L4HHvT9Rwdlcdj59np/giphy.gif)](examples/DemoCodeField/src/MaskExample)<br/>[![react-native-confirmation-code-field unmask example](https://media.giphy.com/media/jslJYqajRARsyANwdf/giphy.gif)](examples/DemoCodeField/src/UnmaskExample)<br/>[![react-native-confirmation-code-field underline example](https://media.giphy.com/media/XEazF64IwELNV8wZge/giphy.gif)](examples/DemoCodeField/src/UnderlineExample)<br/>[![react-native-confirmation-code-field formatting example](https://media.giphy.com/media/Y1TB1fSFtWHAdKSpZY/giphy.gif)](examples/DemoCodeField/src/FormattingExample) |
 
 ## Install
 
 ```sh
 yarn add react-native-confirmation-code-field
+
+# For React Native 0.64.x and above
+yarn add react-native-confirmation-code-field@next
 ```
 
 ## How it works
 
-I use an invisible `<TextInput/>` component that will be stretched over `<Cell/>` components. To solve next problems:
+I use an invisible `<TextInput/>` component that will be stretched over `<Cell/>` components.
+
+JSX structure looks like that:
+
+```jsx
+// Root view (rectangle with a red border on 3d visualization below)
+<View style={rootStyle}>
+  // Each Cell element is result of a `renderCell` function (gray boxes)
+  <Cell>1</Cell>
+  <Cell>2</Cell>
+  <Cell>3</Cell>
+  <Cell>|</Cell>
+  <Cell></Cell>
+  <Cell></Cell>
+  // Invisible Text Input with absolute position (gray rectangle with text '123')
+  <TextInput value="123" />
+</View>
+```
+
+[![3d layout of component](https://media.giphy.com/media/oyYoYUwM3t9O7BuPDO/giphy.gif)](https://codepen.io/retyui/pen/WNGdNdJ)
+
+It needs to solve next problems:
 
 - When user pastes code from SMS on iOS [issue#25](https://github.com/retyui/react-native-confirmation-code-field/issues/25#issuecomment-446497934)
 - Better UX when user types fast, or system sluggish, characters might lost when component switching focus between `<TextInput/>`.
