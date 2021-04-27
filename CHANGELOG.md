@@ -2,12 +2,22 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.1.0
+
+- Fix `warning: unstable_flushDiscreteUpdates: Cannot flush updates when React is already rendering.` on WEB
+  [#171](https://github.com/retyui/react-native-confirmation-code-field/issues/171), [#175](https://github.com/retyui/react-native-confirmation-code-field/issues/175)
+
 ## 7.0.0
 
 - Support react-native 0.64.x and above only!!!
 - Remove a ~~crazy~~ workaround for listening to user taps on the `<TextInput/>` component
 - Optimize a bundle size
 - Export `CodeFieldProps` and `RenderCellOptions` types
+
+## 6.7.0
+
+- Fix `warning: unstable_flushDiscreteUpdates: Cannot flush updates when React is already rendering.` on WEB
+  [#171](https://github.com/retyui/react-native-confirmation-code-field/issues/171), [#175](https://github.com/retyui/react-native-confirmation-code-field/issues/175)
 
 ## 6.5.1
 
