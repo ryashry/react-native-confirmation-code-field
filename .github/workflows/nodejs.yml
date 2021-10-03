@@ -2,6 +2,15 @@ name: Code quality
 
 on:
   push:
+    branches:
+      - master
+    paths:
+      - '.github/**'
+      - 'yarn.lock'
+      - '**.js'
+      - '**.ts'
+      - '**.tsx'
+  pull_request:
     paths:
       - '.github/**'
       - 'yarn.lock'
