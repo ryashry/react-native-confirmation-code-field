@@ -54,7 +54,7 @@
   },
   "author": "David <4661784+retyui@users.noreply.github.com>",
   "description": "A react-native component to input confirmation code for both Android and IOS",
-  "repository": "git@githsrc/__tests__/useClearByFocusCell.test.tsub.com:retyui/react-native-confirmation-code-input.git",
+  "repository": "git@github.com:retyui/react-native-confirmation-code-input.git",
   "license": "MIT",
   "keywords": [
     "react",
