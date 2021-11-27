@@ -10,4 +10,9 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {jsx: true},
   },
+  settings: {
+    react: {
+      version: '17.0.0',
+    },
+  },
 };

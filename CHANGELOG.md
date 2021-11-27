@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.2.0
+
+- Mark all `peerDependencies` as optional
+
 ## 7.1.0
 
 - Fix `warning: unstable_flushDiscreteUpdates: Cannot flush updates when React is already rendering.` on WEB
