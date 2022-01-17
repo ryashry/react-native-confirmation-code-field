@@ -1,6 +1,6 @@
-import React, {ComponentProps} from 'react';
-import {View, Text} from 'react-native';
-import {render, act} from '@testing-library/react-native';
+import React, {ComponentProps, ForwardedRef, forwardRef} from 'react';
+import {Text, TextInput, TextInputProps, View} from 'react-native';
+import {act, render} from '@testing-library/react-native';
 import {CodeField} from '../CodeField';
 import {styles} from '../CodeField.styles';
 
@@ -82,3 +82,72 @@ it('should invoke renderCell for third cell when isFocused and it empty', () => 
     [{index: 3, isFocused: false, symbol: ''}],
   ]);
 });
+
+{
+  console.log(
+    <CodeField
+      renderCell={() => null}
+      ref={(ref: TextInput | null) => {
+        ref?.focus();
+        ref?.blur();
+      }}
+    />,
+  );
+
+  console.log(
+    // @ts-expect-error - number is not function
+    <CodeField
+      onChangeText={123}
+      renderCell={() => null}
+      ref={(ref: TextInput | null) => {
+        ref?.focus();
+        ref?.blur();
+      }}
+    />,
+  );
+}
+
+{
+  interface MyTextInput extends TextInputProps {
+    myRequiredProps: string;
+  }
+
+  // eslint-disable-next-line react/display-name
+  const MyTextInput = forwardRef(
+    (props: MyTextInput, ref: ForwardedRef<TextInput>) => (
+      <View testID={props.myRequiredProps}>
+        <TextInput ref={ref} />
+      </View>
+    ),
+  );
+
+  console.log(
+    <CodeField
+      renderCell={() => null}
+      myRequiredProps="my-required-props"
+      InputComponent={MyTextInput}
+    />,
+  );
+
+  console.log(
+    // @ts-expect-error - `myRequiredProps` is required prop
+    <CodeField<typeof MyTextInput>
+      renderCell={() => null}
+      InputComponent={MyTextInput}
+    />,
+  );
+
+  console.log(
+    // @ts-expect-error - `myRequiredProps` is required prop
+    <CodeField renderCell={() => null} InputComponent={MyTextInput} />,
+  );
+
+  console.log(
+    <CodeField
+      renderCell={() => null}
+      // @ts-expect-error - number is not string
+      myRequiredProps={1}
+      InputComponent={MyTextInput}
+    />,
+  );
+}

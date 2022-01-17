@@ -1,4 +1,5 @@
 import {
+  Omit,
   StyleProp,
   TextInput,
   TextInputProps,
@@ -6,7 +7,16 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import React, {ComponentType, ReactNode, Ref} from 'react';
+import React, {
+  ComponentPropsWithRef,
+  ComponentType,
+  ElementType,
+  forwardRef,
+  ReactElement,
+  ReactNode,
+  Ref,
+  RefAttributes,
+} from 'react';
 import {getStyle, getSymbols} from './utils';
 import {useFocusState} from './useFocusState';
 
@@ -18,13 +28,12 @@ export interface RenderCellOptions {
   isFocused: boolean;
 }
 
-type TextInputPropsWithoutStyle = Omit<TextInputProps, 'style'>;
+type OmitStyle<T extends {style?: any}> = Omit<T, 'style'>;
 
-export interface Props extends TextInputPropsWithoutStyle {
+interface BaseProps {
   renderCell: (options: RenderCellOptions) => ReactNode;
   RootProps?: ViewProps;
   RootComponent?: ComponentType<ViewProps>;
-  InputComponent?: ComponentType<TextInputProps>;
   rootStyle?: ViewProps['style'];
   textInputStyle?: StyleProp<TextStyle>;
   cellCount?: number;
@@ -45,7 +54,7 @@ function CodeFieldComponent(
     RootComponent = View,
     InputComponent = TextInput,
     ...rest
-  }: Props,
+  }: Props & {InputComponent?: ComponentType<any>},
   ref: Ref<TextInput>,
 ) {
   const focusState = useFocusState(onBlur, onFocus);
@@ -87,4 +96,22 @@ function CodeFieldComponent(
   );
 }
 
-export const CodeField = React.forwardRef(CodeFieldComponent);
+export interface Props
+  extends BaseProps,
+    OmitStyle<TextInputProps>,
+    RefAttributes<TextInput> {
+  //
+}
+
+export interface CodeFieldOverridableComponent {
+  <C extends ElementType>(
+    props: {InputComponent: C} & OmitStyle<ComponentPropsWithRef<C>> &
+      BaseProps,
+  ): ReactElement;
+
+  (props: Props): ReactElement;
+}
+
+export const CodeField = forwardRef(
+  CodeFieldComponent,
+) as CodeFieldOverridableComponent;
