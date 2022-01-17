@@ -1,5 +1,4 @@
 import {
-  Omit,
   StyleProp,
   TextInput,
   TextInputProps,

@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.3.0
+
+- Add a new property `InputComponent?: ComponentType` [#193](https://github.com/retyui/react-native-confirmation-code-field/pull/193), thanks @muslumsezgin
+
 ## 7.2.0
 
 - Mark all `peerDependencies` as optional
