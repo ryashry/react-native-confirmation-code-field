@@ -28,5 +28,6 @@ it('should hide cursor after timeout', async () => {
 
   await delay(timeout + 50);
 
-  expect(UNSAFE_getByType(Cursor).children).toEqual(['']);
+  expect(UNSAFE_getByType(Cursor).children).toEqual([]);
 });
+
