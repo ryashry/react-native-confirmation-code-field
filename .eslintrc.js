@@ -6,13 +6,16 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2023,
     sourceType: 'module',
     ecmaFeatures: {jsx: true},
   },
   settings: {
     react: {
-      version: '17.0.0',
+      version: '18.0.0',
     },
   },
+  rules: {
+    "@typescript-eslint/no-explicit-any": "off",
+  }
 };
