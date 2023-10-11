@@ -3,7 +3,7 @@
 [![react-native-confirmation-code-field on npm](https://badgen.net/npm/v/react-native-confirmation-code-field)](https://www.npmjs.com/package/react-native-confirmation-code-field)
 [![react-native-confirmation-code-field downloads](https://badgen.net/npm/dm/react-native-confirmation-code-field)](https://www.npmtrends.com/react-native-confirmation-code-field)
 [![react-native-confirmation-code-field install size](https://packagephobia.com/badge?p=react-native-confirmation-code-field)](https://packagephobia.com/result?p=react-native-confirmation-code-field)
-[![CI status](https://github.com/retyui/react-native-confirmation-code-field/workflows/Node.js%20CI/badge.svg)](https://github.com/retyui/react-native-confirmation-code-field/actions)
+[![CI status](https://github.com/retyui/react-native-confirmation-code-field/actions/workflows/nodejs.yml/badge.svg)](https://github.com/retyui/react-native-confirmation-code-field/actions/workflows/nodejs.yml)
 
 A simple react-native confirmation code field compatible with iOS, Android.
 
@@ -15,7 +15,7 @@ A simple react-native confirmation code field compatible with iOS, Android.
 
 ### Component features:
 
-- 🔮 Simple and tiny `1.55 KB`. Easy to use;
+- 🔮 Simple and tiny `3.8 KB`. Easy to use;
 - 🚮 Clearing part of the code by clicking on the cell;
 - 🍎 Support "fast paste SMS-code" on iOS. And custom code paste for Android;
 - ⚡ TextInput `ref` support;
