@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.3.2
+
+- Fix disabled field by default on iOS after enabling the new architecture [#230](https://github.com/retyui/react-native-confirmation-code-field/issues/230)
+
 ## 7.3.0
 
 - Add a new property `InputComponent?: ComponentType` [#193](https://github.com/retyui/react-native-confirmation-code-field/pull/193), thanks @muslumsezgin
