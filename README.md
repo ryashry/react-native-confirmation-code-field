@@ -28,16 +28,10 @@ A simple react-native confirmation code field compatible with iOS, Android.
 | --- | --- |
 | [![react-native-confirmation-code-field animated example](https://media.giphy.com/media/huJrqF0YRrNJBTwUmz/giphy.gif)](examples/DemoCodeField/src/AnimatedExample) | [![react-native-confirmation-code-field mask example](https://media.giphy.com/media/L4HHvT9Rwdlcdj59np/giphy.gif)](examples/DemoCodeField/src/MaskExample)<br/>[![react-native-confirmation-code-field unmask example](https://media.giphy.com/media/jslJYqajRARsyANwdf/giphy.gif)](examples/DemoCodeField/src/UnmaskExample)<br/>[![react-native-confirmation-code-field underline example](https://media.giphy.com/media/XEazF64IwELNV8wZge/giphy.gif)](examples/DemoCodeField/src/UnderlineExample)<br/>[![react-native-confirmation-code-field formatting example](https://media.giphy.com/media/Y1TB1fSFtWHAdKSpZY/giphy.gif)](examples/DemoCodeField/src/FormattingExample) |
 
-
 ## Install
 
 ```sh
-# For React Native 0.64.x and above
 yarn add react-native-confirmation-code-field
-
-
-# If you need React Native 0.63.x and below
-yarn add react-native-confirmation-code-field@6
 ```
 
 ## How it works
@@ -57,7 +51,7 @@ JSX structure looks like that:
   <Cell></Cell>
   <Cell></Cell>
   // Invisible Text Input with absolute position (gray rectangle with text '123')
-  <TextInput value="123" />
+  <TextInput value="123"/>
 </View>
 ```
 
@@ -139,7 +133,7 @@ const App = () => {
             key={index}
             style={[styles.cell, isFocused && styles.focusCell]}
             onLayout={getCellOnLayoutHandler(index)}>
-            {symbol || (isFocused ? <Cursor /> : null)}
+            {symbol || (isFocused ? <Cursor/> : null)}
           </Text>
         )}
       />
@@ -149,3 +143,8 @@ const App = () => {
 
 export default App;
 ```
+
+### Compatibility
+
+For `react-native@0.63.x` and below use `yarn add react-native-confirmation-code-field@6`, otherwise use the latest version `yarn add react-native-confirmation-code-field`
+
