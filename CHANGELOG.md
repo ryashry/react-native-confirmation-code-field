@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.4.0
+
+- Add  `autoComplete` prop by default, for `CodeField` component [#239](https://github.com/retyui/react-native-confirmation-code-field/pull/239)
+
 ## 7.3.2
 
 - Fix disabled field by default on iOS after enabling the new architecture [#230](https://github.com/retyui/react-native-confirmation-code-field/issues/230)
